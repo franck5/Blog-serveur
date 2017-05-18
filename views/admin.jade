@@ -1,0 +1,48 @@
+doctype html
+html
+  head
+    title Blog
+    meta(charset='utf-8')
+    link(href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css', rel='stylesheet')
+  body
+    .navbar-wrapper
+      nav.navbar.navbar-inverse.navbar-static-top
+        .container
+          #navbar.navbar-collapse.collapse
+            ul.nav.navbar-nav
+              li.active
+                a(href='/result' role='button') Blog
+    .container
+      form(method="POST" action="/result")
+        .form-group
+          h3 Creer un article
+          label(for='titre') Titre
+          input#titre.form-control(type='text', placeholder='Ecrivez le titre' name='titre')
+          if errors.titre
+            div.alert.alert-danger #{errors.titre}
+        .form-group
+          label(for='text') Article
+          textarea#text.form-control.bordered-color-success(rows='5', placeholder='Ecrivez le texte' name='text')
+          if errors.text
+            div.alert.alert-danger #{errors.text}
+          #texthtml
+        div
+         button#envoyer.btn.btn-danger Envoyez
+      button#supprimer.btn.btn-info Supprimer
+
+       div
+      
+      label(for='article') Modifier votre titre
+      input#modiftitre.form-control(type='text', placeholder='Modifier le titre')
+      label(for='article') Modifier votre article
+      textarea#modiftext.form-control(rows='5', placeholder="Modifier l'article")
+      #insbutton
+      #suptitle.col-xs-4
+        h2 Titre
+          
+        h2 Article
+        
+        #suparticle.col-xs-8
+    script(src='https://code.jquery.com/jquery-1.11.2.min.js')
+    script(type='text/javascript', src='/views/app.js')
+    script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js')

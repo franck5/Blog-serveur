@@ -1,0 +1,26 @@
+doctype html
+html
+  head
+    title Blog
+    meta(charset='utf-8')
+    link(href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css', rel='stylesheet')
+  body
+  .navbar-wrapper
+  nav.navbar.navbar-inverse.navbar-static-top
+    #navbar.navbar-collapse.collapse
+      .navbar-center
+        h3.navbar-brand(href='#') Blog
+        .pull-right
+          ul.nav.navbar-nav
+          a(href='admin.html')
+            button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarToggleExternalContent', aria-controls='navbarToggleExternalContent', aria-expanded='false', aria-label='Toggle navigation') <
+  h2 Titre
+
+  li #{titre.titre}
+
+  h2 Article
+  li #{titre.text}
+
+  script(src='https://code.jquery.com/jquery-1.11.2.min.js')
+  script(type='text/javascript', src='views/app.js')
+  script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js')
